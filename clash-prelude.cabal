@@ -104,6 +104,7 @@ Library
                       CLaSH.Prelude.Explicit.Safe
                       CLaSH.Prelude.Mealy
                       CLaSH.Prelude.Moore
+                      CLaSH.Prelude.Property
                       CLaSH.Prelude.RAM
                       CLaSH.Prelude.ROM
                       CLaSH.Prelude.ROM.File
