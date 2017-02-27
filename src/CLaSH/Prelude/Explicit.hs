@@ -80,7 +80,7 @@ import CLaSH.Sized.Vector          (Vec (..), (+>>), asNatProxy, repeat)
 >>> let windowD3 = windowD' clkA :: Signal' ClkA Int -> Vec 3 (Signal' ClkA Int)
 -}
 
-{-# INLINABLE window' #-}
+{-# INLINE window' #-}
 -- | Give a window over a 'Signal''
 --
 -- @
@@ -109,7 +109,7 @@ window' clk x = res
              _ -> let next = x +>> prev
                   in  registerB' clk (repeat def) next
 
-{-# INLINABLE windowD' #-}
+{-# INLINE windowD' #-}
 -- | Give a delayed window over a 'Signal''
 --
 -- @

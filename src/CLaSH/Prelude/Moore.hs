@@ -136,7 +136,7 @@ mooreB = mooreB' systemClock
 medvedevB :: (Bundle i, Bundle s) => (s -> i -> s) -> s -> Unbundled i -> Unbundled s
 medvedevB tr st = mooreB tr id st
 
-{-# INLINABLE moore' #-}
+{-# INLINE moore' #-}
 -- | Create a synchronous function from a combinational function describing
 -- a moore machine
 --

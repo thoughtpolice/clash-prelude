@@ -91,7 +91,7 @@ import CLaSH.Signal.Explicit
 registerB' :: Bundle a => SClock clk -> a -> Unbundled' clk a -> Unbundled' clk a
 registerB' clk i = unbundle Prelude.. register' clk i Prelude.. bundle
 
-{-# INLINABLE isRising' #-}
+{-# INLINE isRising' #-}
 -- | Give a pulse when the 'Signal'' goes from 'minBound' to 'maxBound'
 isRising' :: (Bounded a, Eq a)
           => SClock clk
@@ -103,7 +103,7 @@ isRising' clk is s = liftA2 edgeDetect prev s
     prev = register' clk is s
     edgeDetect old new = old == minBound && new == maxBound
 
-{-# INLINABLE isFalling' #-}
+{-# INLINE isFalling' #-}
 -- | Give a pulse when the 'Signal'' goes from 'maxBound' to 'minBound'
 isFalling' :: (Bounded a, Eq a)
            => SClock clk
